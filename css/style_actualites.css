@@ -1,0 +1,841 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+*{
+  font-family: 'Poppins', sans-serif;
+
+}
+
+
+/* SCROLL*/
+html, body, section {
+    block-size: 100%;
+  }
+  
+  html {
+    scroll-snap-type: y mandatory;
+  }
+  
+  section {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    
+    display: flex;
+    
+  
+  }
+  
+  section:nth-of-type(even) {
+    color: white;
+   
+  }
+  
+  section:nth-of-type(odd) {
+    color: rgb(255, 255, 255);
+    position: relative;
+   
+  }
+  
+  body {
+    margin: 0;
+   
+    font-size: 4rem;
+  }
+  
+  /* SCROLL*/
+  
+
+
+ 
+ /*background*/
+
+ .slide1 { background-color: #cd1e1e; } /* Bleu clair */
+ .slide2 { background-color: #ffefd5; } /* Beige */
+ .slide3 { background-color: #ce2a2a; } /* Lavande */
+ .slide4 { background-color: #f5f5dc; } /* Crème */
+ .slide5 { background-color: #cc0605; } /* Rose pâle */
+
+ 
+ @keyframes animate {
+  0%{
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+      border-radius: 0;
+  }
+  100%{
+      transform: translateY(-1000px) rotate(720deg);
+      opacity: 0;
+      border-radius: 50%;
+  }
+}
+
+.background {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  background: #dddde0;
+  overflow: hidden;
+}
+.background li {
+  position: absolute;
+  display: block;
+  list-style: none;
+  width: 20px;
+  height: 20px;
+  background: rgba(243, 3, 3, 0.412);
+  animation: animate 14s linear infinite;
+}
+
+
+
+
+.background li:nth-child(0) {
+  left: 19%;
+  width: 138px;
+  height: 138px;
+  bottom: -138px;
+  animation-delay: 1s;
+}
+.background li:nth-child(1) {
+  left: 87%;
+  width: 187px;
+  height: 187px;
+  bottom: -187px;
+  animation-delay: 1s;
+}
+.background li:nth-child(2) {
+  left: 57%;
+  width: 148px;
+  height: 148px;
+  bottom: -148px;
+  animation-delay: 5s;
+}
+.background li:nth-child(3) {
+  left: 18%;
+  width: 183px;
+  height: 183px;
+  bottom: -183px;
+  animation-delay: 2s;
+}
+.background li:nth-child(4) {
+  left: 56%;
+  width: 153px;
+  height: 153px;
+  bottom: -153px;
+  animation-delay: 18s;
+}
+.background li:nth-child(5) {
+  left: 57%;
+  width: 100px;
+  height: 100px;
+  bottom: -100px;
+  animation-delay: 8s;
+}
+.background li:nth-child(6) {
+  left: 52%;
+  width: 178px;
+  height: 178px;
+  bottom: -178px;
+  animation-delay: 13s;
+}
+.background li:nth-child(7) {
+  left: 89%;
+  width: 124px;
+  height: 124px;
+  bottom: -124px;
+  animation-delay: 13s;
+}
+.background li:nth-child(8) {
+  left: 45%;
+  width: 133px;
+  height: 133px;
+  bottom: -133px;
+  animation-delay: 19s;
+}
+.background li:nth-child(9) {
+  left: 4%;
+  width: 112px;
+  height: 112px;
+  bottom: -112px;
+  animation-delay: 14s;
+}
+
+ 
+
+
+
+
+ /*background*/
+
+
+
+  /* Ma partie*/
+  
+
+  
+  
+  
+  
+  
+  .slide1>h1{
+    font-size: 5vw;
+    scale: 1.6;
+    display: flex;
+    margin-left: 200px;
+    margin-top: 10vw;
+    color: rgb(243, 240, 240);
+    
+
+  }
+  
+  .slide1>ul{
+    font-size: 3vw;
+    position: absolute;
+    scale:0.5;
+
+  }
+  .slide1 li{
+    margin-top:16%;
+    margin-left: -45%;
+    margin-right: 35%;
+  }
+
+li>a{
+color: black;
+margin-bottom: 30px;
+
+
+}
+
+
+
+.slide1>img{
+  position: relative;
+margin-top: 100px;
+  margin-left: 20%;
+margin-bottom: -10px;
+max-width: 100%;  /* L'image ne dépassera jamais 100% de la largeur de son conteneur */
+height: auto;     /* La hauteur s'ajustera automatiquement pour garder les proportions */
+display: block;
+}
+
+
+
+
+
+/* HOVER POUR LA LISTE SLIDE 1 */
+
+.home-button {
+  font-family: 'Poppins_Bold', sans-serif;
+  
+  display: flex;
+  justify-content: space-around;
+  gap:20px;
+  bottom:40%;
+  left:20%;
+ 
+  
+}
+
+a.button {
+  scale: 3;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  padding: 0.9rem 2rem;
+margin-left: 500px;
+  font-size: inherit;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 0.05rem;
+  font-weight: 700;
+  font-size: 17px;
+  border-radius: 500px;
+  overflow: hidden;
+  background: rgb(224, 221, 221);
+  color: rgb(0, 0, 0);
+  display: flex; /* Permet un alignement flexible des éléments enfants */
+    justify-content: flex-start; /* Alignement à gauche */
+    border: solid;
+  
+  
+ }
+
+
+ 
+
+/* HOVER POUR LA LISTE SLIDE 1 */
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  .slide2>h3{
+    margin-top: 20%;
+    color: rgb(15, 14, 14);
+  margin-left: 55%;
+  position: absolute;
+  text-align: center;
+  font-size: 4vw;
+ 
+  }
+  .slide2>h4{
+    font-size: 3vw;
+    text-align: center;
+    scale: 0.5;
+   position:absolute;
+    margin-right: 40%;
+    margin-top: 6vw;
+    color: rgb(34, 33, 33);
+  
+  }
+ 
+
+  .slide2>img{
+    
+    margin-top: 25%;
+    margin-left: 16.5vw;
+    
+    border: solid;
+    border-color: black;
+    border-width: 10px;
+    border-radius: 30px;
+    transform: scale(0.8);
+    transition: transform 1s, scale 0.5s ease-in-out; /* Transition pour scale */
+  
+  }
+
+  .slide2>img:hover {
+    scale: 1.2;
+    transform: translate(0, -50%);
+    transition: all .3s ease-out;
+  }
+
+ 
+
+
+  
+ 
+  
+  
+  .slide3>h2{
+    margin-top: 10vw;
+    max-width: 50vw;
+    font-size: 5vw;
+    color: rgb(247, 240, 240);
+  margin-left: 10vw;
+  text-align: center;
+ 
+  
+  }
+  .slide3>h4{
+    font-size: 3.5vw;
+    border: solid;
+    text-align: center;
+    scale: 0.5;
+    margin-top: 6vw;
+    position: absolute;
+    margin-left: 45%;
+    color: rgb(241, 236, 236);
+  
+    
+  }
+  
+  .slide3>a{
+
+    position: absolute;
+    bottom: 10vw;
+    left: 47%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1200px;
+    height: 30vh; /* Ajuste la hauteur de l'image à 20% de la hauteur de la fenêtre */
+    object-fit: cover; /* Si tu veux que l'image couvre tout l'espace disponible sans déformation */
+
+    transform: translateX(-50%); /* Assure que l'image est bien centrée */
+    transform-origin: bottom; /* L'image grandit à partir du bas */
+    transition: transform 0.3s ease-out, filter 0.5s ease-out; /* Transition pour un effet fluide */
+
+    
+
+  }
+  .slide3>a:hover  {
+    transform: translateX(-50%) scale(1.5);
+    filter: brightness(10%);
+    
+  }
+
+ 
+  .slide3 a:hover + .text {
+    opacity: 1; /* Rendre le texte visible au hover */
+    transform: translate(-50%, -10vw);
+  }
+
+  .text {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2rem;
+    opacity: 0;
+   
+    z-index: 1; /* S'assure que le texte est au-dessus de l'image */
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+    pointer-events: none;
+    text-align: center;
+  }
+  
+
+
+
+
+  .slide4>h3{
+    margin-top: 18vw;
+    color: rgb(19, 18, 18);
+    font-size: 5vw;
+  margin-left: 65vw;
+  display: flex;
+  text-align: center;
+  scale: 1.2;
+  }
+  .slide4>h4{
+    font-size: 4vw;
+    text-align: center;
+    scale: 0.6;
+    margin-top: 2vw;
+    position: absolute;
+    margin-right: 40%;
+    color: rgb(14, 14, 14);
+  }
+
+
+
+  /* CSS FICHES IPHONE*/
+
+
+.fiches {
+  margin-left: 10vw;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, minmax(350px, 200px));
+  
+  
+
+ 
+position: absolute;
+
+margin-top: 20vw;
+  @media screen and (max-width: 720px) {
+    grid-template-columns: 1fr;
+    margin: 50px 30px;
+  }
+}
+
+.carte {
+
+  border-radius: 30px;
+  padding: 10px;
+  background-image: url(../images/fondblanc.jpg);
+  box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.057);
+  transform: scale(0.9);
+  transition: transform 0.5s, opacity 3s;
+  border: solid;
+  border-color: black;
+  border-width: 3px;
+  
+
+.contenu-carte {
+    .prix {
+      width: calc(100% - 40px);
+      position: absolute;
+      margin-top: 190px;
+      padding: 20px;
+      scale: 0.4;
+      left: 0;
+      color: black;
+      text-align: center;
+    }
+
+   
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    .img {
+      width: 100%;
+      justify-content: bottom;
+      align-content: bottom;
+      text-align: center;
+      img {
+        max-width: 100%;
+        max-height: 220px;
+      }
+    }
+  }
+  .description {
+    color: black;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    width: calc(100%-20px);
+    .title {
+      text-transform: uppercase;
+      text-align: left;
+    }
+    
+  }
+  .footer-carte {
+   
+    padding: 0.3em;
+    border-top: 0.5px solid #ececec;
+    font-size: 11px;
+    color: rgb(0, 0, 0);
+    justify-items: left;
+    align-items: center;
+    display: flex;
+    .bas {
+      margin: 5px;
+      width: auto;
+      background: #dedede;
+      padding: 4px 7px;
+      border-radius: 2px;
+      font-weight: 100;
+      cursor: pointer;
+     
+    }
+  }
+  &:hover {
+    transition: 0.2s ease-in;
+    transform: translateY(-40px);
+    transform: scale(1.2);
+    box-shadow: 0px 45px 60px 0px rgba(0, 0, 0, 0.087);
+  }
+}
+
+
+
+ /* CSS FICHES IPHONE */
+
+
+  
+ 
+  .slide5>h3{
+    margin-top: 250px;
+    color: rgb(19, 18, 18);
+  margin-left: 175px;
+  display: flex;
+  }
+  
+  
+  
+  
+  
+  /* Ma partie*/
+
+
+
+
+
+
+
+  body, html {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+  
+
+
+    @font-face {
+      font-family: 'Poppins_Bold';
+      src: url(../fonts/poppins/Poppins-Bold.ttf);
+    }
+
+
+
+  /*FOOTER*/
+  footer{
+    font-family: 'Poppins_Bold';
+    margin-top: 25%;
+    background: #cc0605;
+    color: white;
+    position: relative;
+    font-size: 16px;
+    color: white;
+    width: 100%;
+    
+  }
+  footer img{
+    width: 250px;
+    margin-top: 43px;
+  }
+  footer iframe{
+    height: 250px;
+    width: 250px;
+    margin-top: 43px;
+  }
+  footer span{
+    margin-top: 25px;
+  }
+  footer h6{
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: left;
+    margin-bottom: 15px;
+    margin-top: 50px;
+  }
+  footer .col-3{
+    padding-left: 35px;
+    
+  }
+  footer a{
+    text-decoration: none;
+    transition: 0.5s;
+    color: white;
+  }
+  footer a:hover{
+    color: #f5871f;
+  }
+  footer .fa-whatsapp{
+    margin-right: 5px;
+  }
+  .copyright{
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    letter-spacing: normal;
+    line-height: normal;
+    text-align: center;
+    height: 45px;
+    background-color: #cc0605;
+    padding-top: 15px;
+  }
+  .footer-container{
+    display: flex;
+    justify-content: center;
+  }
+  .social {
+    display: flex;
+    align-items: center;
+    margin-top: 13px;
+    padding-left: 5px;
+  }
+  .social i {
+    color: #fff;
+    font-size: 17px;
+    margin-right: 15px;
+  }
+  @media only screen and (max-width: 600px) {
+    footer .col-3{
+     padding-left:0;
+  }
+  .footer-container{
+      flex-direction: column;
+  }
+  .footer-container .col-3{
+      width: 100% !important;
+  }
+  .copyright {
+        font-size: 11px;
+    }
+  }
+     
+  
+  /* PARTIE FORMAT TELEPHONE */
+  
+  
+  /* ZOOM 260% */ 
+  @media (max-width: 600px) {
+    .navbar ul li a {
+      font-size: 12px; /* Réduction de la taille de police */
+  }
+  .navbar ul li {
+    margin: 0 4px; /* Ajuste l'espacement entre les éléments */
+  }
+  .home-image img {
+    max-width: 40%;
+    left:50%;
+  }
+  .home-content h1 {
+    font-size: 5rem;
+  }
+  
+  .home-content h2 {
+   font-size: 0.7rem;
+  }
+  }
+  
+  /* ZOOM 300% */ 
+  @media (max-width: 550px) {
+    .navbar ul li a {
+      font-size: 7px; /* Réduction de la taille de police */
+  }
+  .navbar ul li {
+    margin: 0 3px; /* Ajuste l'espacement entre les éléments */
+  }
+  .home-content h1 {
+    font-size: 3.5rem;
+  }
+  
+  .home-content h2 {
+   font-size: 0.6rem;
+  }
+  }
+  
+  /* ZOOM 450% */ 
+  @media (max-width: 350px) {
+    .navbar ul li a {
+      font-size: 5px; /* Réduction de la taille de police */
+  }
+  .navbar ul li {
+    margin: 0 2px; /* Ajuste l'espacement entre les éléments */
+  }
+  }
+  
+  @media screen and (max-width: 768px) {
+    #home {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .home-content {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    .home-content h1 {
+      font-size: 2rem;
+    }
+    
+    .home-content h2 {
+     font-size: 0.4rem;
+    }
+  }
+ /* FOOTER */
+
+
+
+
+ /* HEADER */
+
+
+  nav.scrolled {
+    background-color: red;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+  
+  }
+  
+  
+  /* Sidenav menu */
+  .navbar {
+    transition: background-color 0.3s ease;
+  
+      width: 100%;
+      position: fixed;
+      top: 0;
+      width: 100%; /* S'étend sur toute la largeur */
+      z-index: 1000; /* S'assure qu'elle reste au-dessus des autres éléments */
+      
+  }
+  
+  #mySidenav{
+    font-family: 'Poppins_Bold';
+  }
+  
+  .sidenav {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: -250px;
+      background-color: #e60000;
+      padding-top: 60px;
+      transition: left 0.5s ease;
+    }
+    
+    /* Sidenav menu links */
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: white;
+      display: block;
+      transition: 0.3s;
+    }
+    
+    .sidenav a:hover {
+      color: #111;
+    }
+    
+    .sidenav ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    /* Active class */
+    .sidenav.active {
+      left: 0;
+    }
+    
+    /* Close btn */
+    .sidenav .close {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+    }
+    
+    /* Icône burger */
+    .burger-icon span {
+      display: block;
+      width: 35px;
+      height: 5px;
+      background-color: white;
+      margin: 0.8%;
+    }
+  
+    #openBtn span:hover {
+      background-color: #e60000;
+    }
+    .burger-icon:hover span:nth-child(1) {
+      background-color: #e60000;
+  }
+  
+  .burger-icon:hover span:nth-child(2) {
+      background-color: #e60000;
+  }
+  
+  .burger-icon:hover span:nth-child(3) {
+      background-color: #e60000;
+  }
+
+
+   /* HEADER */

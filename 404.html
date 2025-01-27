@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erreur 404</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/style_support_faq.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+
+  <header>
+    <nav>
+        <div id="mySidenav" class="sidenav">
+            <a id="closeBtn" href="#" class="close">×</a>
+
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="histoire.html">Histoire</a></li>
+                <li><a href="actualités.html">Actualités</a></li>
+                <li><a href="economie.html">Economie</a></li>
+                <li><a href="support_faq.html">Support FAQ</a></li>
+            </ul>
+
+        </div>
+
+        <!-- Icône burger pour ouvrir la barre latérale -->
+        <a href="#" id="openBtn">
+            <span class="burger-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+
+              
+            </span>
+        </a>
+
+        <script>
+           
+    var sidenav = document.getElementById("mySidenav");
+    var openBtn = document.getElementById("openBtn");
+    var closeBtn = document.getElementById("closeBtn");
+    var nav = document.querySelector("nav");
+
+    openBtn.onclick = openNav;
+    closeBtn.onclick = closeNav;
+
+    // Ouvrir le menu latéral
+    function openNav() {
+        sidenav.classList.add("active");
+        nav.classList.remove("scrolled"); // Désactiver la barre de navigation
+        window.removeEventListener("scroll", onScroll); // Désactiver le scroll event
+    }
+
+    // Fermer le menu latéral
+    function closeNav() {
+        sidenav.classList.remove("active");
+        window.addEventListener("scroll", onScroll); // Réactiver le scroll event
+    }
+
+    // Fonction pour gérer le scroll
+    function onScroll() {
+        if (window.scrollY > 100) {
+            nav.classList.add("scrolled");
+        } else {
+            nav.classList.remove("scrolled");
+        }
+    }
+
+    // Ajouter l'écouteur d'événements pour le scroll au chargement
+    window.addEventListener("scroll", onScroll);
+
+    // Empêche le comportement par défaut du lien pour le bouton burger
+    openBtn.onclick = function(event) {
+        event.preventDefault();  // Empêche le comportement par défaut du lien
+        openNav();
+    };
+
+    closeBtn.onclick = function(event) {
+        event.preventDefault();  // Empêche le comportement par défaut du lien
+        closeNav();
+    };
+        </script>
+    </nav>
+</header>
+
+    <section id="home-page2">
+      <div class="header-container">
+        <h1>Erreur 404</h1>
+        <p>Vous n'arrivez pas à trouver la page ?</p>
+    </div>
+      
+    </section>
+
+    <section id="sommaire-faq">
+      <div class="sommaire-box">
+        <h1>Vous avez besoin d'aide ?</h1>
+        <ul>
+          <li><a href="index.html">Retourner à l'accueil</a></li>
+          <li><a href="histoire.html">Voir l'histoire de SFR</a></li>
+          <li><a href="actualités.html">Voir l'actualité de SFR</a></li>
+          <li><a href="economie.html">Voir l'économie de SFR</a></li>
+          <li><a href="support_faq.html">Besoin d'aide</a></li>
+
+        </ul>
+      </div>
+    </section>
+
+
+  
+
+<footer>
+    <div class="container footer-container">
+        <div class="col-3">
+            <img src="./images/logo_footer.png" alt="Logo_site">
+
+            <br>
+            <div class="social">
+                <a href="https://www.facebook.com/SFR"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="httAps://www.instagram.com/sfr.officiel/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://x.com/SFR"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.youtube.com/channel/UCmOWXd_I8xsFRViDcQBNolA"><i class="fa-brands fa-youtube"></i></a>
+
+            </div>
+            <br>
+            <span class="address">Adresse: 25 Fbg de France, 90000 Belfort <br>Mail: contact@sfr.fr
+            </span>
+        </div>
+        <div class="col-3">
+            <h6>À propos</h6>
+            <p>
+                SFR, acteur majeur des télécommunications en France, offre des solutions innovantes <br>en matière de mobile, internet et divertissement. 
+                <br>
+                <br>
+                Connectez-vous à l'avenir avec un réseau fiable et des services à la pointe de la technologie.
+            </p>
+        </div>
+        <div class="col-3">
+            <h6>Actualités</h6>
+            <a href="actualités.html">Voir l'actualité</a>
+
+        </div>
+
+        <div class="col-3">
+            <h6>Economie</h6>
+            <a href="economie.html">Rapport Economique</a>
+        </div>
+
+        <div class="col-3">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2688.4543110400573!2d6.8538139761374675!3d47.63673778589627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47923c9fd3dcc921%3A0x874a887c8f1e512c!2sBoutique%20SFR%20Belfort!5e0!3m2!1sfr!2sfr!4v1726425397458!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+</div>
+    <div class="copyright">
+        Baptiste Didier &#169; 2024 
+    </div>
+</footer>
+
+    <script>
+        // Écoute l'événement de scroll
+        window.addEventListener('scroll', function() {
+            var navbar = document.querySelector('.navbar');
+            // Ajoute la classe 'scrolled' si on défile de plus de 50px
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

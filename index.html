@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'accueil</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> 
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+<header>
+    <nav>
+        <div id="mySidenav" class="sidenav">
+            <a id="closeBtn" href="#" class="close">×</a>
+
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="histoire.html">Histoire</a></li>
+                <li><a href="actualités.html">Actualités</a></li>
+                <li><a href="economie.html">Economie</a></li>
+                <li><a href="support_faq.html">Support FAQ</a></li>
+            </ul>
+
+        </div>
+
+        <!-- Icône burger pour ouvrir la barre latérale -->
+        <a href="#" id="openBtn">
+            <span class="burger-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+
+              
+            </span>
+        </a>
+
+        <script>
+           
+    var sidenav = document.getElementById("mySidenav");
+    var openBtn = document.getElementById("openBtn");
+    var closeBtn = document.getElementById("closeBtn");
+    var nav = document.querySelector("nav");
+
+    openBtn.onclick = openNav;
+    closeBtn.onclick = closeNav;
+
+    // Ouvrir le menu latéral
+    function openNav() {
+        sidenav.classList.add("active");
+        nav.classList.remove("scrolled"); // Désactiver la barre de navigation
+        window.removeEventListener("scroll", onScroll); // Désactiver le scroll event
+    }
+
+    // Fermer le menu latéral
+    function closeNav() {
+        sidenav.classList.remove("active");
+        window.addEventListener("scroll", onScroll); // Réactiver le scroll event
+    }
+
+    // Fonction pour gérer le scroll
+    function onScroll() {
+        if (window.scrollY > 100) {
+            nav.classList.add("scrolled");
+        } else {
+            nav.classList.remove("scrolled");
+        }
+    }
+
+    // Ajouter l'écouteur d'événements pour le scroll au chargement
+    window.addEventListener("scroll", onScroll);
+
+    // Empêche le comportement par défaut du lien pour le bouton burger
+    openBtn.onclick = function(event) {
+        event.preventDefault();  // Empêche le comportement par défaut du lien
+        openNav();
+    };
+
+    closeBtn.onclick = function(event) {
+        event.preventDefault();  // Empêche le comportement par défaut du lien
+        closeNav();
+    };
+        </script>
+    </nav>
+</header>
+
+    <section id="home">
+        <div class="home-content">
+          <h1>SFR</h1>
+          <h2>Internet pour tous.</h2><br>
+
+          
+          <div class="home-button">
+            <a href="#about-us" class="button"><span>En savoir plus</span></a>
+            <a href="economie.html" class="button"><span>Rapport économique</span></a>
+          </div>
+          
+        
+        <div class="home-image">
+          <img src="images/3d_phone.png" alt="Illustration futuriste" >
+        </div>
+    </div>
+      </section>
+      
+      <section id="about-us">
+        <div class="container-about">
+          <h2>Qui sommes-nous ?</h2>
+          <p>
+            Depuis sa création, <strong><a href="https://www.sfr.fr/">SFR</a></strong> (Société Française du Radiotéléphone) s'est imposée comme l'un des leaders des télécommunications en France. Avec plus de 30 ans d'expertise, nous proposons une large gamme de services destinés aux particuliers et aux entreprises, allant des solutions mobiles à l'internet haut débit, en passant par la télévision et les services cloud.
+          </p>
+          <p>
+            Nous nous engageons à offrir une <strong>expérience numérique innovante</strong> à nos clients grâce à des technologies de pointe, <a href="https://www.sfr.fr/offre-internet?sfrcpid=t1_google_m_fixe_fibre&utm_source=google&utm_medium=cpc&utm_campaign=m_fixe_fibre&utm_term=&utm_content=Fibre-SFR-g%C3%A9n%C3%A9rique&gad_source=1&gclid=Cj0KCQjwyL24BhCtARIsALo0fSBiWQJn7HTR0lbB-uxWB32F3RSL2TQVWYFyprX2QeDZdBNbQCbZLGoaArKnEALw_wcB">comme la fibre optique et la 5G</a>. En tant qu'acteur responsable, nous investissons également dans des initiatives visant à réduire notre empreinte écologique et à promouvoir une société plus connectée et inclusive.
+          </p>
+          <p>
+            Notre mission est simple : <strong>connecter les gens et les entreprises</strong>, tout en simplifiant et en enrichissant leur quotidien à travers des solutions numériques adaptées à leurs besoins.
+          </p>
+          <p>
+            <strong><a href="https://www.sfr.fr/offre-mobile/telephone-portable?sfrcpid=t1_google_m_device_autre&utm_source=google&utm_medium=cpc&utm_campaign=m_device_autre&utm_term=&utm_content=Device-SFR-portable&gad_source=1&gclid=Cj0KCQjwyL24BhCtARIsALo0fSALeszkNFQqnKyYMiy6QtkymJQ7qIcIWElragB3ntBUQelCZip73jcaAr4qEALw_wcB">Rejoignez-nous</a></strong> et découvrez un monde de possibilités avec <strong>SFR</strong>, où l'innovation rencontre la performance.
+          </p>
+        </div>
+      </section>
+
+      <section class="cards-section">
+        <div class="card">
+            <h2>Histoire</h2>
+            <p>Plongez dans le parcours fascinant de SFR, des débuts modestes aux réalisations marquantes qui ont façonné son identité aujourd'hui.</p>
+            <a href="histoire.html" class="button-card">En savoir plus</a>
+        </div>
+        <div class="card">
+            <h2>Actualités</h2>
+            <p>Restez informé sur les dernières innovations, événements et offres de SFR qui façonnent l'avenir des télécommunications.</p>
+            <a href="actualités.html" class="button-card">En savoir plus</a>
+        </div>
+        <div class="card">
+            <h2>Economie</h2>
+            <p>Explorez l'impact économique de SFR sur le marché, en découvrant ses contributions à l'innovation et au développement des télécommunications.</p>
+            <a href="economie.html" class="button-card">En savoir plus</a>
+        </div>
+    </section>
+
+    <section class="client">
+      <div class="container-client">
+        <div class="row">
+    
+          <div class="section-title">
+            <h2> Nos partenaires : </h2>
+          </div>
+    
+          <div class="carousel-client">
+            <div class="carousel-inner">
+              <div class="slide"><img src="./images/partners/mcafee.jpg" alt="mcafee"></div> 
+              <div class="slide"><img src="./images/partners/nokia.jpg" alt="nokia"></div>
+              <div class="slide"><img src="./images/partners/huawei.jpg" alt="huawei"></div>
+              <div class="slide"><img src="./images/partners/dellemc.jpg" alt="dellemc"></div>
+              <div class="slide"><img src="./images/partners/symantec.jpg" alt="symantec"></div>
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    </section>
+    
+
+    <script>
+      const slides = document.querySelector('.slides');
+const slideCount = slides.children.length;
+
+// Clone les slides pour créer l'effet de boucle infinie
+for (let i = 0; i < slideCount; i++) {
+  const clone = slides.children[i].cloneNode(true);
+  slides.appendChild(clone); // Duplique les images et les ajoute à la fin
+}
+
+    </script>
+    
+      
+
+      <footer>
+        <div class="container footer-container">
+            <div class="col-3">
+                <img src="./images/logo_footer.png" alt="Logo_site">
+
+                <br>
+                <div class="social">
+                    <a href="https://www.facebook.com/SFR"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="httAps://www.instagram.com/sfr.officiel/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://x.com/SFR"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/channel/UCmOWXd_I8xsFRViDcQBNolA"><i class="fa-brands fa-youtube"></i></a>
+
+                </div>
+                <br>
+                <span class="address">Adresse: 25 Fbg de France, 90000 Belfort <br>Mail: contact@sfr.fr
+                </span>
+            </div>
+            <div class="col-3">
+                <h6>À propos</h6>
+                <p>
+                    SFR, acteur majeur des télécommunications en France, offre des solutions innovantes <br>en matière de mobile, internet et divertissement. 
+                    <br>
+                    <br>
+                    Connectez-vous à l'avenir avec un réseau fiable et des services à la pointe de la technologie.
+                </p>
+            </div>
+            <div class="col-3">
+                <h6>Actualités</h6>
+                <a href="actualités.html">Voir l'actualité</a>
+
+            </div>
+
+            <div class="col-3">
+                <h6>Economie</h6>
+                <a href="economie.html">Rapport Economique</a>
+            </div>
+
+            <div class="col-3">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2688.4543110400573!2d6.8538139761374675!3d47.63673778589627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47923c9fd3dcc921%3A0x874a887c8f1e512c!2sBoutique%20SFR%20Belfort!5e0!3m2!1sfr!2sfr!4v1726425397458!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+</div>
+        <div class="copyright">
+            Baptiste Didier &#169; 2024 
+        </div>
+    </footer>
+
+    
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'Économie</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/style_economie.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div id="mySidenav" class="sidenav">
+                <a id="closeBtn" href="#" class="close">×</a>
+    
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="histoire.html">Histoire</a></li>
+                    <li><a href="actualités.html">Actualités</a></li>
+                    <li><a href="economie.html">Economie</a></li>
+                    <li><a href="support_faq.html">Support FAQ</a></li>
+                </ul>
+    
+            </div>
+    
+            <!-- Icône burger pour ouvrir la barre latérale -->
+            <a href="#" id="openBtn">
+                <span class="burger-icon">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+    
+                  
+                </span>
+            </a>
+    
+            <script>
+               
+        var sidenav = document.getElementById("mySidenav");
+        var openBtn = document.getElementById("openBtn");
+        var closeBtn = document.getElementById("closeBtn");
+        var nav = document.querySelector("nav");
+    
+        openBtn.onclick = openNav;
+        closeBtn.onclick = closeNav;
+    
+        // Ouvrir le menu latéral
+        function openNav() {
+            sidenav.classList.add("active");
+            nav.classList.remove("scrolled"); // Désactiver la barre de navigation
+            window.removeEventListener("scroll", onScroll); // Désactiver le scroll event
+        }
+    
+        // Fermer le menu latéral
+        function closeNav() {
+            sidenav.classList.remove("active");
+            window.addEventListener("scroll", onScroll); // Réactiver le scroll event
+        }
+    
+        // Fonction pour gérer le scroll
+        function onScroll() {
+            if (window.scrollY > 100) {
+                nav.classList.add("scrolled");
+            } else {
+                nav.classList.remove("scrolled");
+            }
+        }
+    
+        // Ajouter l'écouteur d'événements pour le scroll au chargement
+        window.addEventListener("scroll", onScroll);
+    
+        // Empêche le comportement par défaut du lien pour le bouton burger
+        openBtn.onclick = function(event) {
+            event.preventDefault();  // Empêche le comportement par défaut du lien
+            openNav();
+        };
+    
+        closeBtn.onclick = function(event) {
+            event.preventDefault();  // Empêche le comportement par défaut du lien
+            closeNav();
+        };
+            </script>
+        </nav>
+    </header>
+
+    <section id="home-page2">
+        <ul class="background">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+         </ul>
+         <div class="titre-page2">
+            <h1>L'économie de SFR</h1>
+        </div>
+        
+      </section>
+
+
+    <section id="home2-page2">
+       
+        <br>
+
+        <div class="contenu">
+            <div>
+                <div class="Txt">
+                    <h1>Performance</h1>
+                    <br>
+                    <p>Ces dernières années, SFR a connu une certaine stabilité de ses revenus, bien que la concurrence accrue, notamment avec les autres opérateurs télécoms et l’évolution des technologies comme la 5G, ait affecté sa dynamique de croissance. Comme vu dans les tableaux, la baisse des services aux entreprises montre une pression dans ce segment. Cependant, les services résidentiels restent relativement stables, avec des variations faibles. </p>
+                    <br>
+                    <p>L’évolution de l’EBITDA ajusté dans les tableaux montre une amélioration trimestre après trimestre en 2023, mais une baisse annuelle. Cela indique que SFR a su améliorer son efficacité opérationnelle sur le court terme mais fait face à des défis pour maintenir cette rentabilité à long terme.</p>
+                </div>
+                <div class="image">
+                    <img src="./images/performance.jpg" alt="" width="350" height="250" class="image-hover">
+                </div>
+                <br>
+                <br>
+                <div class="Txt">
+                    <h1>Croissance</h1>
+                    <br>
+                    <p>SFR semble avoir maintenu un léger rythme de croissance au niveau de ses revenus résidentiels, mais ses services aux entreprises et équipements résidentiels ont enregistré des baisses. La baisse des revenus totaux de 5,2 % met en évidence une contraction dans des segments importants. Ce recul pourrait être lié à une saturation du marché résidentiel et à la concurrence sur les prix.</p>
+                </div>
+                <div class="image">
+                    <img src="./images/croissance.jpg" alt="" width="350" height="250" class="image-hover">
+                </div>
+                <br>
+                <br>
+                <div class="Txt">
+                    <h1>Gestion du BFR</h1>
+                    <br>
+                    <p>La gestion du BFR se traduit généralement par la capacité d'une entreprise à gérer efficacement ses stocks, ses créances clients et ses dettes fournisseurs. Bien que les tableaux ne donnent pas de détails spécifiques sur les éléments du BFR, l'amélioration de l'EBITDA trimestriel en 2023 suggère que SFR a probablement pris des mesures pour optimiser ses coûts d’exploitation, ce qui peut indirectement influencer la gestion du BFR. La baisse des flux de trésorerie d’exploitation pourrait refléter des difficultés dans la gestion du BFR, notamment en raison de la baisse des revenus et d’une éventuelle pression sur les créances clients ou les dettes à court terme.</p>
+                </div>
+                <div class="image">
+                    <img src="./images/gestion_du_BFR.jpg" alt="" width="350" height="250" class="image-hover">
+                </div>
+                <br>
+                <br>
+                <div class="Txt">
+                    <h1>Autonomie financière</h1>
+                    <br>
+                    <p>L’autonomie financière de SFR dépend de sa capacité à financer ses activités sans recourir excessivement à la dette. La baisse des flux de trésorerie d’exploitation, combinée à la baisse des investissements, pourrait indiquer un certain ajustement de la stratégie de financement. Le fait que les dépenses en capital soient restées relativement stables en 2023 mais aient baissé en 2024 peut indiquer que SFR choisit d'adopter une approche plus prudente pour conserver son autonomie financière. Cette réduction des investissements pourrait être une stratégie pour limiter l'endettement.</p>
+                </div>
+                <div class="image">
+                    <img src="./images/autonomie_financiere.jpg" alt="" width="350" height="250" class="image-hover">
+                </div>
+                <br>
+                <br>
+                <div class="Txt">
+                    <h1>Rentabilité</h1>
+                    <br>
+                    <p>En 2023, la rentabilité opérationnelle a progressé de manière régulière au fil des trimestres, mais la baisse de l’EBITDA en 2024 (-7,5 %) est préoccupante et montre une détérioration de la rentabilité globale. Cela pourrait être dû à une augmentation des coûts ou à une pression sur les prix, combinée à des baisses de revenus dans des segments clés. L’amélioration du résultat d'exploitation en 2023, de 336 millions d'euros à 517 millions d'euros, indique que SFR a su maintenir ses marges grâce à des gains d'efficacité. Toutefois, l’évolution négative de 2024 suggère un défi à moyen terme pour maintenir ces marges dans un environnement concurrentiel difficile.</p>
+                </div>
+                <div class="image">
+                    <img src="./images/rentabilite.jpg" alt="" width="350" height="250" class="image-hover">
+                </div>
+                <br>
+                <br>
+                <div class="Txt">
+                    <h1>Synthèse</h1>
+                    <br>
+                    <p>SFR montre des signes de résilience avec des investissements dans des secteurs stratégiques comme la 5G, mais doit faire face à une baisse de rentabilité et de croissance en 2024, ce qui pourrait impliquer la nécessité de revoir sa stratégie sur certains segments du marché pour maintenir sa compétitivité et son autonomie financière à long terme.</p>
+                </div>
+                <br>
+
+                <a href="rapport/rapport_economie.pdf" class="bouton" download="rapport_economie.pdf">Télécharger le rapport économique</a>
+                <br>
+                <br>
+                <embed src="rapport/rapport_economie.pdf" width="800" height="500" type="application/pdf" class="rapport">
+
+            </div>
+        </div>
+        
+    </section>
+      
+
+      <footer>
+        <div class="container footer-container">
+            <div class="col-3">
+                <img src="./images/logo_footer.png" alt="Logo_site">
+
+                <br>
+                <div class="social">
+                    <a href="https://www.facebook.com/SFR"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/sfr.officiel/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://x.com/SFR"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/channel/UCmOWXd_I8xsFRViDcQBNolA"><i class="fa-brands fa-youtube"></i></a>
+
+                </div>
+                <br>
+                <span class="address">Address: 25 Fbg de France, 90000 Belfort <br>Mail: contact@sfr.fr
+                </span>
+            </div>
+            <div class="col-3">
+                <h6>À propos</h6>
+                <p>
+                    SFR, acteur majeur des télécommunications en France, offre des solutions innovantes <br>en matière de mobile, internet et divertissement. 
+                    <br>
+                    <br>
+                    Connectez-vous à l'avenir avec un réseau fiable et des services à la pointe de la technologie.
+                </p>
+            </div>
+            <div class="col-3">
+                <h6>Actualités</h6>
+                <a href="actualités.html">Voir l'actualité</a>
+
+            </div>
+
+            <div class="col-3">
+                <h6>Economie</h6>
+                <a href="#">Rapport Economique</a>
+            </div>
+
+            <div class="col-3">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2688.4543110400573!2d6.8538139761374675!3d47.63673778589627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47923c9fd3dcc921%3A0x874a887c8f1e512c!2sBoutique%20SFR%20Belfort!5e0!3m2!1sfr!2sfr!4v1726425397458!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+</div>
+        <div class="copyright">
+            Mathis Demoly &#169; 2024 
+        </div>
+    </footer>
+
+    <script>
+        // Écoute l'événement de scroll
+        window.addEventListener('scroll', function() {
+            var navbar = document.querySelector('.navbar');
+            // Ajoute la classe 'scrolled' si on défile de plus de 50px
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
